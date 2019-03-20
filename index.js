@@ -11,7 +11,7 @@ function startTheGame() {
   let startDiv = document.createElement("div");
   startDiv.classList.add("dimScreen");
   let startMessage = document.createElement("h2");
-  startMessage.innerText = `n-Tac-Toe`;
+  startMessage.innerText = `Cubical Tic-Tac-Toe (n x n x n)`;
   startDivsBox.appendChild(startMessage);
   startDiv.appendChild(startDivsBox);
 
@@ -34,7 +34,12 @@ function startTheGame() {
     const val = input.value;
     console.log(val);
     boardSize = Number(val);
-    buildBoard(boardSize);
+    if (val > 20) {
+      alert("Board size can't be greater than 20.");
+      window.location.reload();
+    } else {
+      buildBoard(boardSize);
+    }
 
     startDiv.style.display = "none";
   }
@@ -53,7 +58,10 @@ function endTheGame(playerID) {
   let darkDiv = document.createElement("div");
   darkDiv.classList.add("dimScreen");
   let winnerMessage = document.createElement("h2");
-  winnerMessage.innerText = `player ${playerID} wins`;
+  // winnerMessage.setAttribute("style", "white-space: pre;");
+
+  winnerMessage.innerHTML = `player ${playerID} wins. \r\n`;
+  winnerMessage.innerHTML += `\r\nrefresh the page to play again.`;
   // darkDiv.appendChild(winnerMessage);
 
   endDivsBox.appendChild(winnerMessage);
