@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/78e82368-32a9-4707-a571-8ad30c4d4b95/deploy-status)](https://app.netlify.com/sites/blissful-benz-0629cb/deploys)
