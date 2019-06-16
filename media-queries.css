@@ -1,0 +1,31 @@
+/* Tablet and "landscape" mobile phone */
+@media (max-width: 1000px) {
+  .box {
+    padding: 70px 0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(15, 8, 56, 0.8);
+  }
+
+  .box > h2 {
+    font-size: 1.2em;
+    letter-spacing: 0.25em;
+  }
+}
+
+/* "Portrait" mobile phone */
+@media (max-width: 414px) {
+  body {
+    margin: 0 auto;
+  }
+
+  .box {
+    width: 100%;
+    background-color: rgba(15, 8, 56, 0.8);
+  }
+
+  .box > h2 {
+    font-size: 0.85em;
+    letter-spacing: 0.25em;
+  }
+}
